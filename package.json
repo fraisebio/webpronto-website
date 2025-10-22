@@ -1,0 +1,20 @@
+{
+  "name": "webpronto-site",
+  "version": "1.0.0",
+  "description": "Site vitrine WebPronto - Agence de création de sites web",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": ["web", "agency", "website", "portfolio"],
+  "author": "WebPronto",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
