@@ -16,13 +16,35 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
-// Navbar scroll effect
+// Navbar scroll effect with auto-hide on mobile
+let lastScrollTop = 0;
+const scrollThreshold = 10;
+
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
+    const currentScroll = window.scrollY;
+    
+    // Add scrolled class for styling
+    if (currentScroll > 100) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
+    
+    // Auto-hide on mobile only (width <= 768px)
+    if (window.innerWidth <= 768) {
+        if (currentScroll > lastScrollTop && currentScroll > 100) {
+            // Scrolling down & past threshold
+            navbar.classList.add('hide');
+        } else if (currentScroll < lastScrollTop || currentScroll < 100) {
+            // Scrolling up or at top
+            navbar.classList.remove('hide');
+        }
+    } else {
+        // Always show on desktop
+        navbar.classList.remove('hide');
+    }
+    
+    lastScrollTop = currentScroll;
 });
 
 // Smooth scrolling for anchor links
