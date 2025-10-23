@@ -1,3 +1,56 @@
+// Typewriter effect for hero title on mobile
+function typewriterEffect() {
+    // Only run on mobile devices
+    if (window.innerWidth > 480) {
+        // On desktop, just show the text normally
+        const titleLines = document.querySelectorAll('.hero-title .title-line');
+        titleLines.forEach(line => {
+            line.style.opacity = '1';
+        });
+        return;
+    }
+    
+    const titleLines = document.querySelectorAll('.hero-title .title-line');
+    if (titleLines.length === 0) return;
+    
+    // Store original text before clearing
+    const texts = [];
+    titleLines.forEach(line => {
+        texts.push(line.textContent.trim());
+        line.textContent = '';
+        line.style.opacity = '1';
+        line.style.display = 'block';
+    });
+    
+    let lineIndex = 0;
+    let charIndex = 0;
+    
+    function typeNextChar() {
+        if (lineIndex >= titleLines.length) return;
+        
+        const currentLine = titleLines[lineIndex];
+        const fullText = texts[lineIndex];
+        
+        if (charIndex < fullText.length) {
+            currentLine.textContent += fullText.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeNextChar, 50); // 50ms entre chaque lettre
+        } else {
+            lineIndex++;
+            charIndex = 0;
+            if (lineIndex < titleLines.length) {
+                setTimeout(typeNextChar, 400); // 400ms avant la ligne suivante
+            }
+        }
+    }
+    
+    // Start typing after a small delay
+    setTimeout(typeNextChar, 500);
+}
+
+// Run typewriter on page load
+window.addEventListener('DOMContentLoaded', typewriterEffect);
+
 // Navigation mobile toggle
 const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
