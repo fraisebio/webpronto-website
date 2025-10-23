@@ -1323,7 +1323,7 @@ body::after {
 
 .faq-item.active .faq-answer {
     padding: 0 1.5rem 1.5rem;
-    max-height: 200px;
+    max-height: 1000px;
 }
 
 .faq-answer p {
