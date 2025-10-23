@@ -2095,6 +2095,20 @@ body::after {
     .portfolio-item {
         height: 250px;
     }
+    
+    /* Sur mobile, afficher l'overlay automatiquement */
+    .portfolio-overlay {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+    
+    .portfolio-item.in-view .portfolio-overlay {
+        opacity: 1;
+    }
+    
+    .portfolio-item:not(.in-view) .portfolio-overlay {
+        opacity: 0;
+    }
 
     /* Contact */
     .contact-info h2 {

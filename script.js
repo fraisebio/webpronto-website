@@ -98,7 +98,41 @@ window.addEventListener('scroll', () => {
     }
     
     lastScrollTop = currentScroll;
+    
+    // Portfolio overlay on mobile scroll
+    if (window.innerWidth <= 480) {
+        handlePortfolioScroll();
+    }
 });
+
+// Portfolio overlay visibility on mobile
+function handlePortfolioScroll() {
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    const windowHeight = window.innerHeight;
+    const centerY = window.scrollY + windowHeight / 2;
+    
+    let closestItem = null;
+    let closestDistance = Infinity;
+    
+    portfolioItems.forEach(item => {
+        const rect = item.getBoundingClientRect();
+        const itemCenterY = window.scrollY + rect.top + rect.height / 2;
+        const distance = Math.abs(centerY - itemCenterY);
+        
+        if (distance < closestDistance && rect.top < windowHeight && rect.bottom > 0) {
+            closestDistance = distance;
+            closestItem = item;
+        }
+    });
+    
+    // Remove in-view from all items
+    portfolioItems.forEach(item => item.classList.remove('in-view'));
+    
+    // Add in-view to closest item
+    if (closestItem && closestDistance < windowHeight / 3) {
+        closestItem.classList.add('in-view');
+    }
+}
 
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
