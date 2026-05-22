@@ -1214,3 +1214,84 @@ h1, h2, h3, h4 {
   color: var(--ink-400);
 }
 .section--dark .sec-index { color: var(--ink-300); opacity: .7; }
+
+/* ----- Mobile header + drawer -------------------------------- */
+.mobile-nav { display: none; }
+.menu-toggle__close { display: none; }
+
+@media (max-width: 880px) {
+  .header__inner { position: relative; }
+
+  .logo { transition: opacity .3s ease, transform .3s ease; }
+  .logo__img { height: 32px; }
+
+  .header__cta .btn--primary {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-10px, -50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s ease, transform .3s ease;
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+  .header.is-condensed .logo {
+    opacity: 0;
+    transform: translateX(-10px);
+    pointer-events: none;
+  }
+  .header.is-condensed .header__cta .btn--primary {
+    opacity: 1;
+    transform: translate(0, -50%);
+    pointer-events: auto;
+  }
+
+  .menu-toggle__open { display: block; }
+  .header.is-menu-open .menu-toggle__open { display: none; }
+  .header.is-menu-open .menu-toggle__close { display: block; }
+  .header.is-menu-open .menu-toggle {
+    background: var(--ink-900);
+    color: #fff;
+    border-color: var(--ink-900);
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    background: rgba(245, 247, 250, 0.96);
+    backdrop-filter: saturate(140%) blur(14px);
+    -webkit-backdrop-filter: saturate(140%) blur(14px);
+    border-bottom: 1px solid var(--line-soft);
+    padding: 8px var(--pad-x) 22px;
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease, transform .25s ease;
+  }
+  .mobile-nav > a:not(.btn) {
+    font-family: var(--font-display);
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--ink-900);
+    padding: 14px 2px;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .mobile-nav > a:not(.btn):last-of-type { border-bottom: none; }
+  .mobile-nav .btn { align-self: flex-start; margin-top: 16px; }
+  .header.is-menu-open .mobile-nav {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+}
+
+/* Hide the hero diagram on phones — too busy for small screens */
+@media (max-width: 720px) {
+  .system-col { display: none; }
+  .hero__grid { gap: 0; }
+}
