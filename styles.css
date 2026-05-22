@@ -1227,7 +1227,7 @@ h1, h2, h3, h4 {
 
   .header__cta .btn--primary {
     position: absolute;
-    left: 0;
+    left: 10px;
     top: 50%;
     transform: translate(-10px, -50%);
     opacity: 0;
