@@ -1,542 +1,975 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebPronto - Agence de création de sites web sur-mesure</title>
-    <meta name="description" content="WebPronto - Agence web spécialisée dans la création de sites internet sur-mesure, référencement SEO et hébergement sécurisé. Devis gratuit.">
-    <link rel="stylesheet" href="styles.css?v=6.5">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="logo/logo_webpronto_minimisé.png">
-    <link rel="shortcut icon" href="logo/logo_webpronto_minimisé.png">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>WebPronto — Sites, CRM et outils métier sur mesure</title>
+<meta name="description" content="WebPronto crée des sites, CRM et outils internes sur mesure pour suivre vos clients, gérer vos devis, piloter vos stocks et automatiser les tâches qui vous font perdre du temps." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home" class="logo-link">
-                    <img src="logo/logo_webpronto.png" alt="WebPronto" class="logo-image">
-                </a>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Accueil</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#portfolio" class="nav-link">Nos réalisations</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <a href="#contact" class="nav-cta">Devis Gratuit</a>
-            </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
+
+<!-- ===================== HEADER ===================== -->
+<header class="header" id="site-header">
+  <div class="container header__inner">
+    <a href="#" class="logo" aria-label="WebPronto, retour en haut">
+      <img src="assets/logo_webpronto.png" alt="WebPronto" class="logo__img" />
+    </a>
+
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#services">Services</a>
+      <a href="#exemples">Exemples</a>
+      <a href="#methode">Méthode</a>
+      <a href="#offres">Offres</a>
+      <a href="#contact">Contact</a>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="title-line">Donnez de l'élan à votre</span>
-                    <span class="title-line highlight">présence en ligne</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Experts en création de sites internet sur-mesure, 
-                    design responsive et optimisation SEO pour une visibilité maximale.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Devis Gratuit</a>
-                    <a href="tel:0756986856" class="btn btn-secondary">
-                        <i class="fas fa-phone"></i>
-                        Appelez-nous
-                    </a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="floating-card card-1">
-                    <i class="fas fa-laptop-code"></i>
-                    <span>Design sur-mesure</span>
-                </div>
-                <div class="floating-card card-2">
-                    <i class="fas fa-mobile-alt"></i>
-                    <span>Responsive</span>
-                </div>
-                <div class="floating-card card-3">
-                    <i class="fas fa-search"></i>
-                    <span>SEO Optimisé</span>
-                </div>
-                <div class="floating-card card-4">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>Sécurisé</span>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="header__cta">
+      <a href="#contact" class="btn btn--ghost">Voir les offres</a>
+      <a href="#contact" class="btn btn--primary">
+        Demander un diagnostic
+        <span class="arrow" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3>Design Responsive</h3>
-                    <p>Une navigation parfaite sur tous les appareils avec un design adaptatif et moderne.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Optimisation SEO</h3>
-                    <p>Boostez votre visibilité sur Google efficacement avec nos techniques d'optimisation avancées.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <h3>Sécurité Accrue</h3>
-                    <p>Des solutions fiables pour une protection maximale de votre site et de vos données.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="container hero__grid">
+    <div class="hero__copy">
+      <span class="eyebrow reveal">ADAPTÉ À VOTRE FAÇON DE TRAVAILLER</span>
+      <h1 class="h-display reveal">Des outils web clairs pour gérer votre activité sans le bazar.</h1>
+      <p class="lede reveal">WebPronto crée des sites, CRM et outils internes sur mesure pour suivre vos clients, gérer vos devis, piloter vos stocks, organiser vos équipes et automatiser les tâches qui vous font perdre du temps.</p>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Nos Services</h2>
-                <p class="section-subtitle">Des solutions complètes pour votre présence en ligne</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Conception de Site</h3>
-                    <p>Un site professionnel conçu sur-mesure pour votre activité. Nos développeurs créent des sites uniques et performants, adaptés à votre image et optimisés pour une navigation fluide et intuitive sur tous les appareils.</p>
-                    <ul class="service-features">
-                        <li>Design sur-mesure</li>
-                        <li>Navigation intuitive</li>
-                        <li>Performance optimisée</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3>Hébergement Web</h3>
-                    <p>Un hébergement sécurisé et performant pour votre site. Nous vous offrons un nom de domaine, un certificat SSL et une protection avancée pour garantir rapidité, fiabilité et sécurité à votre plateforme.</p>
-                    <ul class="service-features">
-                        <li>Nom de domaine inclus</li>
-                        <li>Certificat SSL gratuit</li>
-                        <li>Protection avancée</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                    <h3>Référencement</h3>
-                    <p>Un site visible et bien positionné sur Google. Nos experts en SEO optimisent votre site pour améliorer son classement et assurer votre présence sur les principales plateformes de recherche et de cartographie.</p>
-                    <ul class="service-features">
-                        <li>Optimisation SEO</li>
-                        <li>Référencement local</li>
-                        <li>Suivi des performances</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <h3>Création de Logo</h3>
-                    <p>Une identité visuelle unique et percutante. Nous concevons des logos professionnels, adaptés à votre marque et à votre secteur, pour vous démarquer et marquer durablement les esprits.</p>
-                    <ul class="service-features">
-                        <li>Logo sur-mesure</li>
-                        <li>Identité visuelle</li>
-                        <li>Charte graphique</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+      <div class="hero__ctas reveal">
+        <a href="#contact" class="btn btn--primary">
+          Demander un diagnostic
+          <span class="arrow" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+        <a href="#services" class="btn btn--ghost">Voir ce qu'on peut créer</a>
+      </div>
 
-    <!-- Benefits Section -->
-    <section class="benefits">
-        <div class="container">
-            <div class="benefits-content">
-                <div class="benefits-text">
-                    <h2>Avantages de la création de votre Site Internet</h2>
-                    <div class="benefits-grid">
-                        <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="benefit-content">
-                                <h4>Nouveaux clients</h4>
-                                <p>La création d'un site internet va donner une grande possibilité aux visiteurs d'en savoir plus sur l'entreprise. Cela va permettre aux responsables d'éviter de perdre du temps par téléphone pour répondre aux questions redondantes.</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="benefit-content">
-                                <h4>Consultables 7j/7 24h/24</h4>
-                                <p>Avec la création d'un site internet, votre entreprise sera consultable sans interruption (24h/24 et 7j/7) et même accessible partout dans le monde.</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-trophy"></i>
-                            </div>
-                            <div class="benefit-content">
-                                <h4>Se démarquer de la concurrence</h4>
-                                <p>Si vous voulez rester pertinent et compétitif dans votre domaine, il est important que votre entreprise ait une empreinte en ligne. La création d'un site internet vous aide non seulement à rester compétitif, mais aussi à consolider votre rôle d'entreprise reconnue.</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-cogs"></i>
-                            </div>
-                            <div class="benefit-content">
-                                <h4>Automatiser certaines tâches</h4>
-                                <p>Sur votre site internet, vous pouvez automatiser certaines tâches qui vous permettront d'économiser du temps et donc de l'argent. C'est le cas notamment des formulaires de contact en ligne, de prise de rendez-vous, ou d'achat en ligne pour un site e-commerce.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      <div class="hero__reassure reveal">Pensé pour les commerces, artisans et entreprises qui veulent du concret.</div>
+    </div>
 
-    <!-- Testimonial Section -->
-    <section class="testimonial">
-        <div class="container">
-            <div class="testimonial-content">
-                <div class="quote-icon">
-                    <i class="fas fa-quote-left"></i>
-                </div>
-                <blockquote>
-                    "Grâce à leur expertise, mon site internet a été créé rapidement et avec un design moderne. L'équipe est très à l'écoute et a su répondre à toutes mes attentes. Je recommande vivement leurs services pour un site performant et sécurisé."
-                </blockquote>
-                <div class="testimonial-author">
-                    <div class="author-info">
-                        <h4>Nicolas Marceau</h4>
-                        <span>Client satisfait</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Visual system diagram -->
+    <div class="system-col reveal">
+    <div class="system" aria-hidden="true">
+      <div class="system__board" style="border-color: rgb(235, 224, 224)"></div>
 
-    <!-- Why Trust Us Section -->
-    <section class="why-trust">
-        <div class="container">
-            <h2>Pourquoi nous faire confiance ?</h2>
-            <div class="trust-grid">
-                <div class="trust-card">
-                    <div class="trust-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Passionnés</h3>
-                    <p>Nous créons avec passion des sites qui vous inspirent.</p>
-                </div>
-                <div class="trust-card">
-                    <div class="trust-icon">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h3>Professionnels</h3>
-                    <p>Des solutions web professionnelles pour des résultats efficaces.</p>
-                </div>
-                <div class="trust-card">
-                    <div class="trust-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>Support</h3>
-                    <p>Un accompagnement réactif pour garantir votre sérénité.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+      <svg class="wires" viewBox="0 0 560 560" preserveAspectRatio="none">
+        <!-- Incoming flows (modules → Pilotage) -->
+        <path class="live" d="M 130 110 C 200 160, 230 210, 270 260" />
+        <path class="live" d="M 430 100 C 380 160, 340 200, 300 260" />
+        <path class="live" d="M 130 480 C 200 420, 240 360, 270 320" />
+        <!-- Outgoing flows (Pilotage → modules) -->
+        <path class="live" d="M 260 290 C 220 290, 170 290, 100 290" />
+        <path class="live" d="M 320 290 C 340 290, 390 290, 460 290" />
+        <path class="live" d="M 300 320 C 330 360, 380 420, 440 470" />
+        <path class="live" d="M 280 320 C 280 360, 280 420, 270 460" />
+      </svg>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Nos Réalisations</h2>
-                <p class="section-subtitle">Découvrez quelques-uns de nos projets récents</p>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <div class="portfolio-placeholder">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <h4>Site E-commerce</h4>
-                            <p>Boutique en ligne moderne</p>
-                            <a href="#" class="portfolio-link">Voir le projet</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <div class="portfolio-placeholder">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <h4>Site Vitrine</h4>
-                            <p>Présence en ligne professionnelle</p>
-                            <a href="#" class="portfolio-link">Voir le projet</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <div class="portfolio-placeholder">
-                            <i class="fas fa-utensils"></i>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <h4>Site Restaurant</h4>
-                            <p>Réservation en ligne</p>
-                            <a href="#" class="portfolio-link">Voir le projet</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <div class="portfolio-placeholder">
-                            <i class="fas fa-stethoscope"></i>
-                        </div>
-                        <div class="portfolio-overlay">
-                            <h4>Site Médical</h4>
-                            <p>Prise de rendez-vous</p>
-                            <a href="#" class="portfolio-link">Voir le projet</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      <!-- Top nodes -->
+      <div class="node" style="top: 6%; left: 6%;">
+        <span class="node__lbl" style="opacity: 1">module · 01</span>
+        <span class="node__title">Site web</span>
+        <span class="node__bar"></span>
+      </div>
+      <div class="node" style="top: 4%; right: 6%;">
+        <span class="node__lbl">module · 02</span>
+        <span class="node__title">Clients</span>
+        <span class="node__bar"></span>
+      </div>
 
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Obtenez votre site professionnel dès maintenant !</h2>
-                <p>Contactez-nous pour un devis gratuit et personnalisé</p>
-                <a href="#contact" class="btn btn-primary btn-large">Contactez nous</a>
-            </div>
-        </div>
-    </section>
+      <!-- Middle row -->
+      <div class="node" style="top: 44%; left: 2%;">
+        <span class="node__lbl">module · 03</span>
+        <span class="node__title">Devis</span>
+        <span class="node__bar"></span>
+      </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h2>Contactez nous</h2>
-                    <p>Prêt à donner vie à votre projet ? Contactez-nous pour un devis gratuit et personnalisé.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Téléphone</h4>
-                                <p>07 56 98 68 56</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p>contact@webpronto.fr</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Adresse</h4>
-                                <p>Paris, France</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- WhatsApp Button -->
-                    <a href="https://wa.me/33756986856" target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
-                        <i class="fab fa-whatsapp"></i>
-                        <span>Discuter sur WhatsApp</span>
-                    </a>
-                </div>
-                <div class="contact-form">
-                    <form id="contactForm" action="https://formspree.io/f/myznarky" method="POST">
-                        <!-- Champ caché pour personnaliser l'objet de l'email -->
-                        <input type="hidden" name="_subject" value="Nouveau message depuis WebPronto">
-                        <div class="form-group">
-                            <label for="firstName">Prénom *</label>
-                            <input type="text" id="firstName" name="firstName" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="lastName">Nom *</label>
-                            <input type="text" id="lastName" name="lastName" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-mail *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Téléphone *</label>
-                            <input type="tel" id="phone" name="phone" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Quel est votre budget ?</label>
-                            <div class="budget-options">
-                                <label class="budget-option">
-                                    <input type="radio" name="budget" value="<200€">
-                                    <span class="budget-label">&lt;200€</span>
-                                </label>
-                                <label class="budget-option">
-                                    <input type="radio" name="budget" value="200€ - 500€" checked>
-                                    <span class="budget-label">200€ - 500€</span>
-                                </label>
-                                <label class="budget-option">
-                                    <input type="radio" name="budget" value="500€ - 1000€">
-                                    <span class="budget-label">500€ - 1000€</span>
-                                </label>
-                                <label class="budget-option">
-                                    <input type="radio" name="budget" value="1000€ - 3000€">
-                                    <span class="budget-label">1000€ - 3000€</span>
-                                </label>
-                                <label class="budget-option">
-                                    <input type="radio" name="budget" value="3000€ - 5000€">
-                                    <span class="budget-label">3000€ - 5000€</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Décrivez nous votre projet *</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">Envoyer</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+      <div class="node node--center" style="top: 38%; left: 50%; transform: translateX(-50%);">
+        <span class="node__lbl">INTERFACE</span>
+        <span class="node__title">Pilotage</span>
+        <span class="node__bar"></span>
+      </div>
 
-    <!-- FAQ Section -->
-    <section class="faq">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">FAQ</h2>
-                <p class="section-subtitle">Voici les questions les plus fréquemment posées</p>
-            </div>
-            <div class="faq-content">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Quels sont les délais de livraison pour la création du site ?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Les délais de livraison pour la création d'un site internet dépendent de plusieurs facteurs tels que la complexité du site, le nombre de pages et de fonctionnalités souhaitées par le client, ainsi que la qualité et la quantité de contenu fourni. En général, un site vitrine peut être livré plus rapidement que des sites plus complexes tels que des sites e-commerce. C'est pourquoi il est important de nous demander un devis au préalable pour obtenir une estimation plus précise du délai de livraison pour votre projet de création de site internet.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Quels sont les coûts pour la création d'un site internet?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>La création d'un site internet peut coûter différemment en fonction du type de site que le client souhaite et des fonctionnalités qu'ils désirent inclure. Un site vitrine sera généralement moins cher qu'un site e-commerce complet avec des fonctionnalités avancées. Les coûts pour la création d'un site internet dépendent également du nombre de pages et des fonctionnalités souhaitées. C'est pourquoi il est important de nous demander un devis au préalable pour obtenir une estimation plus précise des coûts.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Quel est le processus de création d'un site internet chez vous ?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Le processus de création de site internet chez nous est très méticuleux. Tout d'abord, nous analysons en détail votre demande pour nous assurer que nous comprenons parfaitement vos besoins. Ensuite, nous commençons la création du site en vous donnant accès à un suivi en temps réel, afin que vous puissiez nous faire des commentaires et des suggestions en cours de route. Une fois le site terminé, nous le testons soigneusement pour vous garantir une qualité optimale et nous le mettons en ligne. Enfin, nous validons le projet avec vous pour vous assurer que tout est en ordre. Le but est de livrer un site internet sur mesure, respectant vos demandes et vos attentes.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Est-ce que le site internet sera responsive pour tous les appareils ?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Absolument, chez nous, la création de site internet inclut une adaptation responsive pour tous les appareils, y compris les mobiles et les tablettes. Cela garantit une expérience utilisateur optimale pour les visiteurs sur n'importe quel support, augmentant ainsi la visibilité et la portée de votre site internet.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Comment garantissez-vous une bonne optimisation SEO ?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Pour garantir une bonne optimisation pour les moteurs de recherche lors de la création de site internet, nous nous assurons de rédiger du contenu sur mesure, SEO-friendly et basé sur les mots clés les plus adaptés à votre demande. La création de site répond aux normes SEO pour une visibilité optimale en ligne. Nous travaillons dur pour garantir une performance maximale pour les moteurs de recherche pour votre site web afin d'attirer des clients potentiels et d'augmenter votre visibilité en ligne.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Faut-il prévoir des coûts supplémentaires pour créer un site internet ?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Créer un site internet peut sembler coûteux, mais chez nous, il n'y a aucun coût supplémentaire à prévoir en dehors de l'hébergement du site. Nous voulons que votre expérience soit la plus simple et la plus abordable possible, sans coûts cachés ou surprises. Avec nous, vous pouvez être sûr de ne pas dépenser plus que nécessaire pour votre site internet.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      <div class="node" style="top: 44%; right: 2%;">
+        <span class="node__lbl">module · 04</span>
+        <span class="node__title">Stock</span>
+        <span class="node__bar"></span>
+      </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>WebPronto</h3>
-                    <p>Agence web spécialisée dans la création de sites internet sur-mesure, référencement naturel SEO et la publicité via les réseaux sociaux à moindre coût.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#services">Création de site</a></li>
-                        <li><a href="#services">Hébergement</a></li>
-                        <li><a href="#services">Référencement</a></li>
-                        <li><a href="#services">Logo design</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><i class="fas fa-phone"></i> 07 56 98 68 56</li>
-                        <li><i class="fas fa-envelope"></i> contact@webpronto.fr</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Paris, France</li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Informations</h4>
-                    <ul>
-                        <li><a href="/plan-du-site.html">Plan du site</a></li>
-                        <li><a href="/mentions-legales.html">Mentions légales</a></li>
-                        <li><a href="/politique-confidentialite.html">Politique de confidentialité</a></li>
-                        <li><a href="/cgv.html">CGV</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 WebPronto. Tous les droits sont réservés. | <a href="/mentions-legales.html" style="color: #A78BFA; text-decoration: none;">Mentions légales</a> | <a href="/plan-du-site.html" style="color: #A78BFA; text-decoration: none;">Plan du site</a></p>
-            </div>
-        </div>
-    </footer>
+      <!-- Bottom row -->
+      <div class="node" style="bottom: 4%; left: 6%;">
+        <span class="node__lbl">module · 05</span>
+        <span class="node__title">Employés</span>
+        <span class="node__bar"></span>
+      </div>
+      <div class="node" style="bottom: 6%; left: 50%; transform: translateX(-50%);">
+        <span class="node__lbl">module · 06</span>
+        <span class="node__title">Relances</span>
+        <span class="node__bar"></span>
+      </div>
+      <div class="node" style="bottom: 4%; right: 6%;">
+        <span class="node__lbl">module · 07</span>
+        <span class="node__title">Support</span>
+        <span class="node__bar"></span>
+      </div>
+    </div>
 
-    <script src="script.js?v=6.5"></script>
+    <p class="system__caption reveal">Site, clients, devis, stock, équipe, support : tout reste connecté.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROBLÈME ===================== -->
+<section class="section section--tight" id="probleme">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <span class="sec-index">— 01 / Le constat</span>
+        <h2 class="h-section reveal">Le problème, ce n'est pas votre activité. C'est tout ce qui part dans tous les sens.</h2>
+      </div>
+      <p class="lede reveal">Les demandes arrivent par mail, téléphone, formulaire, Instagram ou WhatsApp. Les devis sont faits à part. Le stock est parfois suivi sur Excel. Les employés n'ont pas toujours le même niveau d'information. Les relances dépendent de la mémoire. Et l'administratif finit par prendre trop de place.</p>
+    </div>
+
+    <div class="problems reveal">
+      <div class="problem">
+        <span class="problem__num">01</span>
+        <span class="problem__txt">❌  Prospects éparpillés</span>
+        <span class="problem__hint">Mail, Insta, WhatsApp, formulaire…</span>
+      </div>
+      <div class="problem">
+        <span class="problem__num">02</span>
+        <span class="problem__txt">❌  Devis non relancés</span>
+        <span class="problem__hint">Et envoyés, puis oubliés.</span>
+      </div>
+      <div class="problem">
+        <span class="problem__num">03</span>
+        <span class="problem__txt">❌  Stock suivi à la main</span>
+        <span class="problem__hint">Sur un cahier ou un Excel partagé.</span>
+      </div>
+      <div class="problem">
+        <span class="problem__num">04</span>
+        <span class="problem__txt">❌  Clients mal centralisés</span>
+        <span class="problem__hint">L'historique tient dans la tête.</span>
+      </div>
+      <div class="problem">
+        <span class="problem__num">05</span>
+        <span class="problem__txt">❌ Employés sans interface claire</span>
+        <span class="problem__hint">Chacun travaille à sa façon.</span>
+      </div>
+      <div class="problem">
+        <span class="problem__num">06</span>
+        <span class="problem__txt">❌  Support désorganisé</span>
+        <span class="problem__hint">Les demandes se perdent en chemin.</span>
+      </div>
+      <div class="problem">
+        <span class="problem__num">07</span>
+        <span class="problem__txt">❌ Rendez-vous confirmés à la main</span>
+        <span class="problem__hint">Et des no-shows qu'on aurait pu éviter.</span>
+      </div>
+      <div class="problem">
+        <span class="problem__num">08</span>
+        <span class="problem__txt">❌  Tableaux Excel qui débordent</span>
+        <span class="problem__hint">Avec dix versions différentes.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <span class="sec-index">— 02 / Ce qu'on crée</span>
+        <h2 class="h-section reveal">✅ Un site, un CRM, un outil interne… ou tout un système.</h2>
+      </div>
+      <p class="lede reveal">On part de votre façon de travailler, puis on construit l'outil qui va avec. Pas un logiciel énorme. Pas une usine à gaz. Un système clair, adapté à votre métier.</p>
+    </div>
+
+    <div class="services reveal">
+      <article class="service">
+        <div class="service__head">
+          <span class="service__num">01</span>
+          <span class="service__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 8h18M7 12h6M7 15h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </span>
+        </div>
+        <h3 class="h-card">Sites web professionnels</h3>
+        <p>Un site clair, rapide et crédible pour présenter votre activité, capter des demandes et rassurer vos futurs clients.</p>
+        <ul>
+          <li>vitrine</li><li>formulaire</li><li>rendez‑vous</li><li>pages services</li><li>connexion CRM</li>
+        </ul>
+      </article>
+
+      <article class="service">
+        <div class="service__head">
+          <span class="service__num">02</span>
+          <span class="service__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3" stroke="currentColor" stroke-width="1.6"/><path d="M3 19c.8-3 3.2-4.5 6-4.5s5.2 1.5 6 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 5h5M15 9h5M15 13h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </span>
+        </div>
+        <h3 class="h-card">CRM sur mesure</h3>
+        <p>Un espace simple pour suivre vos prospects, clients, devis, statuts et prochaines actions.</p>
+        <ul>
+          <li>fiches clients</li><li>pipeline</li><li>devis</li><li>relances</li><li>historique</li>
+        </ul>
+      </article>
+
+      <article class="service">
+        <div class="service__head">
+          <span class="service__num">03</span>
+          <span class="service__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 7l9-4 9 4-9 4-9-4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M3 12l9 4 9-4M3 17l9 4 9-4" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+        <h3 class="h-card">Un ERP métier</h3>
+        <p>Un outil interne adapté à votre activité pour gérer ce qui ne rentre pas dans un logiciel standard.</p>
+        <ul>
+          <li>stock</li><li>commandes</li><li>devis</li><li>factures</li><li>tâches</li><li>documents</li>
+        </ul>
+      </article>
+
+      <article class="service">
+        <div class="service__head">
+          <span class="service__num">04</span>
+          <span class="service__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><circle cx="8" cy="12" r="2" stroke="currentColor" stroke-width="1.6"/><path d="M13 10h5M13 14h3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </span>
+        </div>
+        <h3 class="h-card">Interfaces employé &amp; admin</h3>
+        <p>Des accès différents selon les rôles : employés, managers, administrateurs.</p>
+        <ul>
+          <li>authentification</li><li>espace employé</li><li>permissions</li><li>dashboard admin</li><li>suivi d'activité</li>
+        </ul>
+      </article>
+
+      <article class="service">
+        <div class="service__head">
+          <span class="service__num">05</span>
+          <span class="service__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3v4M12 17v4M5 12H3M21 12h-2M6 6l-1.5-1.5M19.5 19.5L18 18M6 18l-1.5 1.5M19.5 4.5L18 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.6"/></svg>
+          </span>
+        </div>
+        <h3 class="h-card">Automatisations</h3>
+        <p>Des actions qui se déclenchent seules pour éviter les oublis et les tâches répétitives.</p>
+        <ul>
+          <li>relance devis</li><li>rappels RDV</li><li>avis Google</li><li>emails auto</li><li>notifs internes</li>
+        </ul>
+      </article>
+
+      <article class="service">
+        <div class="service__head">
+          <span class="service__num">06</span>
+          <span class="service__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 12a8 8 0 1 1-3.3-6.5L21 4v5h-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 13h6M8 16h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </span>
+        </div>
+        <h3 class="h-card">Support client &amp; suivi</h3>
+        <p>Un système pour centraliser les demandes clients, suivre les réponses et ne rien laisser passer.</p>
+        <ul>
+          <li>tickets</li><li>demandes</li><li>statuts</li><li>réponses types</li><li>suivi client</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EXEMPLES ===================== -->
+<section class="section section--tight" id="exemples">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <span class="sec-index">— 03 / En pratique</span>
+        <h2 class="h-section reveal">Concrètement, ça peut donner quoi ?</h2>
+      </div>
+      <p class="lede reveal">Six scénarios courts pour rendre l'idée tangible. Chaque déclencheur côté gauche fait quelque chose d'utile côté droit — sans intervention manuelle.</p>
+    </div>
+
+    <div class="examples reveal">
+      <div class="example">
+        <div class="example__col">
+          <span class="example__lbl">Déclencheur</span>
+          <span class="example__txt">Un prospect remplit le formulaire du site.</span>
+        </div>
+        <div class="example__arrow" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="example__col example__col--out">
+          <span class="example__lbl">Résultat</span>
+          <span class="example__txt">Il est ajouté au CRM, vous recevez une notification, une tâche de rappel est créée.</span>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="example__col">
+          <span class="example__lbl">Déclencheur</span>
+          <span class="example__txt">Un devis reste sans réponse.</span>
+        </div>
+        <div class="example__arrow" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="example__col example__col--out">
+          <span class="example__lbl">Résultat</span>
+          <span class="example__txt">Une relance part automatiquement après quelques jours, sans que vous ayez à y penser.</span>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="example__col">
+          <span class="example__lbl">Déclencheur</span>
+          <span class="example__txt">Un employé se connecte à son espace.</span>
+        </div>
+        <div class="example__arrow" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="example__col example__col--out">
+          <span class="example__lbl">Résultat</span>
+          <span class="example__txt">Il voit uniquement ses tâches, ses clients ou ses demandes à traiter.</span>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="example__col">
+          <span class="example__lbl">Déclencheur</span>
+          <span class="example__txt">Un produit passe sous un seuil de stock.</span>
+        </div>
+        <div class="example__arrow" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="example__col example__col--out">
+          <span class="example__lbl">Résultat</span>
+          <span class="example__txt">Vous recevez une alerte ou une tâche de réapprovisionnement.</span>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="example__col">
+          <span class="example__lbl">Déclencheur</span>
+          <span class="example__txt">Un client demande de l'aide.</span>
+        </div>
+        <div class="example__arrow" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="example__col example__col--out">
+          <span class="example__lbl">Résultat</span>
+          <span class="example__txt">Sa demande arrive dans un espace support, avec un statut et un historique.</span>
+        </div>
+      </div>
+
+      <div class="example">
+        <div class="example__col">
+          <span class="example__lbl">Déclencheur</span>
+          <span class="example__txt">Un rendez-vous est réservé.</span>
+        </div>
+        <div class="example__arrow" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="example__col example__col--out">
+          <span class="example__lbl">Résultat</span>
+          <span class="example__txt">Le client reçoit une confirmation, puis un rappel automatique avant la date.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== POUR QUI ===================== -->
+<section class="section section--tight" id="pour-qui">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <span class="sec-index">— 04 / Pour qui</span>
+        <h2 class="h-section reveal">Pour les structures qui veulent un outil à leur image.</h2>
+      </div>
+      <p class="lede reveal">WebPronto s'adresse aux entreprises qui ont besoin de mieux gérer leur activité, sans acheter un logiciel trop lourd ou trop rigide.</p>
+    </div>
+
+    <div class="profiles reveal">
+      <article class="profile">
+        <div class="profile__head">
+          <span class="profile__num">01</span>
+          <span class="profile__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 4h9l4 4v12a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 4v5h5M9 13h6M9 16h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </span>
+        </div>
+        <h3 class="profile__title">Vous vendez avec des devis</h3>
+        <p>Suivez les demandes, les statuts, les relances et les prochaines actions sans perdre de prospects en route.</p>
+        <ul class="profile__tags"><li>devis</li><li>relances</li><li>prospects</li><li>suivi</li></ul>
+      </article>
+
+      <article class="profile">
+        <div class="profile__head">
+          <span class="profile__num">02</span>
+          <span class="profile__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.2" stroke="currentColor" stroke-width="1.6"/><path d="M5 20c.8-3.5 3.4-5.2 7-5.2s6.2 1.7 7 5.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </span>
+        </div>
+        <h3 class="profile__title">Vous gérez des clients récurrents</h3>
+        <p>Centralisez les fiches clients, l'historique, les rappels, les rendez-vous et les actions à ne pas oublier.</p>
+        <ul class="profile__tags"><li>clients</li><li>historique</li><li>rappels</li><li>fidélisation</li></ul>
+      </article>
+
+      <article class="profile">
+        <div class="profile__head">
+          <span class="profile__num">03</span>
+          <span class="profile__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 7l9-4 9 4-9 4-9-4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M3 12l9 4 9-4M3 17l9 4 9-4" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+        <h3 class="profile__title">Vous avez du stock ou des commandes</h3>
+        <p>Gardez une vision claire sur les produits, les entrées, les sorties, les seuils et les commandes à suivre.</p>
+        <ul class="profile__tags"><li>stock</li><li>commandes</li><li>alertes</li><li>suivi</li></ul>
+      </article>
+
+      <article class="profile">
+        <div class="profile__head">
+          <span class="profile__num">04</span>
+          <span class="profile__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="8" cy="9" r="2.6" stroke="currentColor" stroke-width="1.6"/><circle cx="16" cy="9" r="2.6" stroke="currentColor" stroke-width="1.6"/><path d="M3 20c.8-3 2.6-4.2 5-4.2s4.2 1.2 5 4.2M14 20c.6-2.2 2-3.5 4-3.5s3.4 1.3 4 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </span>
+        </div>
+        <h3 class="profile__title">Vous travaillez en équipe</h3>
+        <p>Créez des accès adaptés pour les employés, managers ou administrateurs, avec les bonnes informations au bon endroit.</p>
+        <ul class="profile__tags"><li>équipe</li><li>accès</li><li>rôles</li><li>tableau de bord</li></ul>
+      </article>
+
+      <article class="profile">
+        <div class="profile__head">
+          <span class="profile__num">05</span>
+          <span class="profile__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v10H8l-4 4V6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 10h8M8 13h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </span>
+        </div>
+        <h3 class="profile__title">Vous recevez beaucoup de demandes</h3>
+        <p>Regroupez les messages, demandes clients, formulaires et tickets pour éviter les oublis et mieux répondre.</p>
+        <ul class="profile__tags"><li>support</li><li>demandes</li><li>messages</li><li>statuts</li></ul>
+      </article>
+
+      <article class="profile">
+        <div class="profile__head">
+          <span class="profile__num">06</span>
+          <span class="profile__icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M21 12a9 9 0 1 1-3.5-7.1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M21 4v5h-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/></svg>
+          </span>
+        </div>
+        <h3 class="profile__title">Vous perdez du temps sur du répétitif</h3>
+        <p>Automatisez les rappels, relances, confirmations, notifications et tâches simples qui reviennent chaque semaine.</p>
+        <ul class="profile__tags"><li>automatisations</li><li>rappels</li><li>emails</li><li>notifications</li></ul>
+      </article>
+    </div>
+
+    <div class="profiles__footer reveal">
+      <p class="profiles__concl">Le métier change, le problème reste souvent le même : trop d'informations dispersées, pas assez de suivi, et des tâches répétitives qui prennent du temps.</p>
+      <a href="#contact" class="btn btn--inline">
+        Parler de mon organisation
+        <span class="arrow" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MÉTHODE ===================== -->
+<section class="section section--dark" id="methode">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <span class="sec-index">— 05 / Méthode</span>
+        <h2 class="h-section reveal">Une méthode simple : comprendre, construire, améliorer.</h2>
+      </div>
+      <p class="lede reveal" style="color:#98AAC9;">Pas de projet informatique interminable. Chaque étape a un livrable clair, et vous savez à tout moment où on en est.</p>
+    </div>
+
+    <div class="method reveal">
+      <div class="step">
+        <span class="step__num">étape 01</span>
+        <span class="step__title">Diagnostic</span>
+        <p class="step__desc">On regarde votre fonctionnement actuel : clients, devis, stock, outils, tâches répétitives.</p>
+      </div>
+      <div class="step">
+        <span class="step__num">étape 02</span>
+        <span class="step__title">Plan clair</span>
+        <p class="step__desc">On définit ce qu'il faut créer en priorité. Pas de gadget, pas de complexité inutile.</p>
+      </div>
+      <div class="step">
+        <span class="step__num">étape 03</span>
+        <span class="step__title">Construction</span>
+        <p class="step__desc">On développe le site, le CRM, l'interface ou les automatisations nécessaires.</p>
+      </div>
+      <div class="step">
+        <span class="step__num">étape 04</span>
+        <span class="step__title">Test terrain</span>
+        <p class="step__desc">On ajuste avec vous pour que l'outil colle vraiment à votre façon de travailler.</p>
+      </div>
+      <div class="step">
+        <span class="step__num">étape 05</span>
+        <span class="step__title">Mise en ligne</span>
+        <p class="step__desc">Vous repartez avec un système utilisable, clair et expliqué.</p>
+      </div>
+      <div class="step">
+        <span class="step__num">étape 06</span>
+        <span class="step__title">Suivi</span>
+        <p class="step__desc">On peut rester disponible pour corriger, améliorer et faire évoluer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== OFFRES ===================== -->
+<section class="section" id="offres">
+  <div class="container">
+    <div class="sec-head">
+      <div>
+        <span class="sec-index">— 06 / Offres</span>
+        <h2 class="h-section reveal">On peut commencer petit, puis faire évoluer.</h2>
+      </div>
+      <p class="lede reveal">Chaque activité est différente. L'idée n'est pas de vous vendre un gros système dès le départ, mais de commencer par ce qui vous fera gagner le plus de temps.</p>
+    </div>
+
+    <div class="offers reveal">
+      <article class="offer">
+        <span class="offer__num">Basique</span>
+        <h3 class="h-card">Site &amp; prise de contact</h3>
+        <div class="offer__price">à partir de 490 €</div>
+        <p class="offer__desc">Pour poser une présence propre en ligne et capter des demandes.</p>
+        <ul>
+          <li>Site vitrine professionnel</li>
+          <li>Formulaire de contact</li>
+          <li>Pages essentielles</li>
+          <li>Version mobile soignée</li>
+          <li>Base SEO</li>
+          <li>Possibilité de connecter un CRM ensuite</li>
+        </ul>
+        <a href="#contact" class="btn btn--ghost">
+          Créer une base propre
+          <span class="arrow" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+      </article>
+
+      <article class="offer offer--feature">
+        <span class="offer__tag">Le plus demandé</span>
+        <span class="offer__num">Classique</span>
+        <h3 class="h-card">CRM &amp; automatisations</h3>
+        <div class="offer__price">à partir de 1 600 €</div>
+        <p class="offer__desc">Pour suivre vos prospects, devis, clients et relances dans un système clair.</p>
+        <ul>
+          <li style="color: rgb(255, 255, 255)">CRM simple</li>
+          <li style="color: rgb(255, 255, 255)">Pipeline devis &amp; clients</li>
+          <li style="color: rgb(255, 255, 255)">Relances automatiques</li>
+          <li style="color: rgb(255, 255, 255)">Rappels &amp; notifications</li>
+          <li style="color: rgb(255, 255, 255)">Dashboard de suivi</li>
+          <li style="color: rgb(255, 255, 255)">Formation incluse</li>
+        </ul>
+        <a href="#contact" class="btn btn--light">
+          Structurer mon suivi client
+          <span class="arrow" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+      </article>
+
+      <article class="offer">
+        <span class="offer__num">Avancé</span>
+        <h3 class="h-card">Outil métier sur mesure</h3>
+        <div class="offer__price">sur devis</div>
+        <p class="offer__desc">Pour créer une interface adaptée à votre activité : stock, employés, support, devis, admin, reporting.</p>
+        <ul>
+          <li>Espace avec connexion</li>
+          <li>Rôles employés &amp; admin</li>
+          <li>Gestion stock ou opérations</li>
+          <li>Tableaux de bord</li>
+          <li>Workflows métier</li>
+          <li>Évolutions possibles</li>
+        </ul>
+        <a href="#contact" class="btn btn--ghost">
+          Parler de mon besoin
+          <span class="arrow" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+      </article>
+    </div>
+
+    <div class="suivi reveal">
+      <div class="suivi__left">
+        <span class="suivi__title">Suivi mensuel — à partir de 79 €/mois</span>
+        <span class="suivi__desc">On reste joignables pour corriger, améliorer et faire évoluer dans le temps.</span>
+      </div>
+      <div class="suivi__tags">
+        <span>support léger</span>
+        <span>petites modifs</span>
+        <span>surveillance</span>
+        <span>améliorations</span>
+        <span>conseils</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DIFFÉRENCIATION ===================== -->
+<section class="section section--tight" id="difference">
+  <div class="container">
+    <div class="diff">
+      <div>
+        <span class="sec-index">— 07 / Pourquoi WebPronto</span>
+        <h2 class="h-section reveal" style="margin-top:14px;">Pas un outil générique. Pas une usine à gaz.</h2>
+        <p class="lede reveal" style="margin-top:18px;">Un commerce, un garage ou un artisan n'a pas besoin du même système qu'une grande entreprise. WebPronto construit des outils utiles, compréhensibles et adaptés à votre réalité.</p>
+      </div>
+      <div class="diff__points reveal">
+        <div class="diff__pt"><span>↗</span><p>On part de votre métier, pas d'un modèle générique.</p></div>
+        <div class="diff__pt"><span>↗</span><p>On simplifie avant d'automatiser.</p></div>
+        <div class="diff__pt"><span>↗</span><p>On évite les fonctionnalités inutiles.</p></div>
+        <div class="diff__pt"><span>↗</span><p>On construit quelque chose que vous pouvez vraiment utiliser.</p></div>
+        <div class="diff__pt"><span>↗</span><p>On peut commencer petit.</p></div>
+        <div class="diff__pt"><span>↗</span><p>On fait évoluer quand c'est nécessaire.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== À PROPOS ===================== -->
+<section class="section section--tight" id="apropos">
+  <div class="container">
+    <div class="about">
+      <div>
+        <span class="sec-index">— 08 / À propos</span>
+        <h2 class="h-section reveal" style="margin-top:14px;">WebPronto, 
+la technique au service du terrain.</h2>
+      </div>
+            <div class="about__copy reveal">
+        <p>Nous sommes une petite équipe technique, passionnée par les systèmes simples, propres et efficaces.</p>
+        <p>Notre rôle : comprendre comment votre activité fonctionne vraiment, puis construire l'outil qui vous manque pour mieux gérer vos clients, vos devis, vos stocks, vos équipes ou vos tâches répétitives.</p>
+        <p>Pas de logiciel compliqué imposé. Pas de jargon inutile. Des solutions web claires, sur mesure, pensées pour être utilisées au quotidien.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="section section--tight" id="faq">
+  <div class="container">
+    <div class="sec-head sec-head--single">
+      <span class="sec-index">— 09 / Questions fréquentes</span>
+      <h2 class="h-section reveal" style="margin-top:14px;">Les questions qu'on nous pose souvent.</h2>
+    </div>
+
+    <div class="faq reveal">
+      <div class="faq__item">
+        <button class="faq__btn" type="button">
+          Est-ce que WebPronto fait encore des sites web&nbsp;?
+          <span class="faq__icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq__body"><p>Oui. Mais l'idée n'est pas seulement de créer un joli site. Un site WebPronto doit servir à quelque chose : présenter votre activité, capter des demandes, rassurer vos clients et, si besoin, envoyer les contacts directement dans votre CRM ou votre outil de suivi.</p></div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__btn" type="button">
+          Je veux seulement un CRM, c'est possible&nbsp;?
+          <span class="faq__icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq__body"><p>Bien sûr. On peut créer un CRM simple et adapté à votre façon de travailler : prospects, clients, devis, statuts, relances, historique et prochaines actions. Pas besoin de refaire tout votre site pour commencer.</p></div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__btn" type="button">
+          Est-ce que vous pouvez créer un outil interne sur mesure&nbsp;?
+          <span class="faq__icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq__body"><p>C'est un de nos cas les plus fréquents. WebPronto peut créer un espace connecté pour gérer des devis, du stock, des commandes, du support client, des documents ou des tâches internes. L'objectif est de remplacer les fichiers dispersés par un outil clair et utilisable au quotidien.</p></div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__btn" type="button">
+          Peut-on avoir des accès différents pour les employés&nbsp;?
+          <span class="faq__icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq__body"><p>Sans souci. On peut prévoir des comptes employés, managers et administrateurs, avec des permissions différentes. Chaque personne voit uniquement ce dont elle a besoin : tâches, clients, demandes, stock, tableau de bord ou suivi d'activité.</p></div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__btn" type="button">
+          Est-ce adapté à une petite entreprise&nbsp;?
+          <span class="faq__icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq__body"><p>C'est exactement le public visé. WebPronto est pensé pour les petites structures qui veulent un outil clair, sans logiciel trop lourd. On peut commencer avec une version simple, puis ajouter des fonctionnalités quand le besoin devient réel.</p></div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__btn" type="button">
+          Est-ce que je dois tout faire d'un coup&nbsp;?
+          <span class="faq__icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq__body"><p>Non. Le plus intelligent est souvent de commencer par le problème le plus rentable : les devis non relancés, les prospects mal suivis, le stock à clarifier, les rendez-vous à automatiser ou les demandes clients à centraliser. Ensuite, le système peut évoluer.</p></div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__btn" type="button">
+          Combien de temps prend un projet&nbsp;?
+          <span class="faq__icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq__body"><p>Un site ou un premier CRM simple peut être mis en place assez rapidement. Pour un outil métier plus complet, on définit d'abord un périmètre clair : ce qui est indispensable maintenant, ce qui peut attendre, et ce qui pourra être ajouté plus tard.</p></div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__btn" type="button">
+          Est-ce que vous utilisez mes outils actuels&nbsp;?
+          <span class="faq__icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq__body"><p>Quand c'est possible, oui. L'idée n'est pas de tout jeter. On peut partir de vos formulaires, emails, fichiers, agendas, outils de facturation ou habitudes existantes, puis construire un système plus propre autour.</p></div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__btn" type="button">
+          Qui possède l'outil à la fin&nbsp;?
+          <span class="faq__icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq__body"><p>Le projet est construit pour votre activité. Les accès, les données et le fonctionnement doivent rester clairs pour vous. Selon le type de projet, on précise dès le départ ce qui est livré, ce qui est hébergé, et ce qui peut être modifié ensuite.</p></div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__btn" type="button">
+          Combien ça coûte&nbsp;?
+          <span class="faq__icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq__body"><p>Cela dépend du besoin. Un site simple peut commencer autour de 490 €. Un CRM ou système de suivi démarre généralement autour de 1 600 €. Un outil métier plus complet, avec stock, comptes employés, dashboard ou workflows spécifiques, se chiffre après un diagnostic.</p></div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__btn" type="button">
+          Et après la mise en ligne&nbsp;?
+          <span class="faq__icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq__body"><p>Vous pouvez utiliser le système seul, ou prévoir un suivi mensuel pour les ajustements, petites évolutions, corrections et améliorations. L'objectif est que l'outil reste propre, utile et adapté à votre activité.</p></div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__btn" type="button">
+          Mes données sont-elles protégées&nbsp;?
+          <span class="faq__icon" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="faq__body"><p>Oui, c'est un point important. On évite les accès inutiles, on limite les données collectées à ce qui sert vraiment, et on choisit des solutions adaptées au niveau de sensibilité de votre activité.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA FINAL + FORM ===================== -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="cta-final reveal">
+      <span class="sec-index" style="color:var(--cyan); opacity:.9;">— 10 / Commencer</span>
+      <h2 class="h-section" style="margin-top:16px;">Vous avez sûrement déjà un outil qui manque à votre activité.</h2>
+      <p>Un fichier Excel qui déborde, des devis oubliés, un stock suivi à la main, des clients mal relancés, des employés sans interface claire… On peut commencer par là.</p>
+      <p class="cta-final__sub">Expliquez votre activité en quelques lignes. On vous répond avec une première idée simple et concrète.</p>
+      <a href="#form" class="btn btn--light">
+        Demander un diagnostic
+        <span class="arrow" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+    </div>
+
+    <form class="form reveal" id="form" novalidate>
+      <div class="form__field">
+        <label class="form__label" for="f-nom">Nom</label>
+        <input id="f-nom" name="nom" type="text" placeholder="Camille Martin" required />
+      </div>
+      <div class="form__field">
+        <label class="form__label" for="f-entreprise">Entreprise</label>
+        <input id="f-entreprise" name="entreprise" type="text" placeholder="Atelier Martin" />
+      </div>
+      <div class="form__field">
+        <label class="form__label" for="f-email">Email</label>
+        <input id="f-email" name="email" type="email" placeholder="vous@exemple.fr" required />
+      </div>
+      <div class="form__field">
+        <label class="form__label" for="f-tel">Téléphone <span style="text-transform:none; letter-spacing:0; color:var(--ink-400);">(optionnel)</span></label>
+        <input id="f-tel" name="telephone" type="tel" placeholder="06 12 34 56 78" />
+      </div>
+      <div class="form__field span-2">
+        <label class="form__label" for="f-secteur">Secteur d'activité</label>
+        <select id="f-secteur" name="secteur" required>
+          <option value="" disabled selected>Choisir un secteur</option>
+          <option>Artisan</option>
+          <option>Garage</option>
+          <option>Commerce local</option>
+          <option>Institut / salon</option>
+          <option>Auto-école</option>
+          <option>Organisme de formation</option>
+          <option>Coach / indépendant</option>
+          <option>Petite agence</option>
+          <option>Service B2B</option>
+          <option>Autre</option>
+        </select>
+      </div>
+
+      <div class="form__field span-2">
+        <label class="form__label">Ce que vous cherchez</label>
+        <div class="checks" id="checks">
+          <label class="check"><input type="checkbox" name="besoin" value="Site web" /><span class="box"></span><span>Site web</span></label>
+          <label class="check"><input type="checkbox" name="besoin" value="CRM" /><span class="box"></span><span>CRM</span></label>
+          <label class="check"><input type="checkbox" name="besoin" value="Automatisations" /><span class="box"></span><span>Automatisations</span></label>
+          <label class="check"><input type="checkbox" name="besoin" value="Gestion de stock" /><span class="box"></span><span>Gestion de stock</span></label>
+          <label class="check"><input type="checkbox" name="besoin" value="Gestion de devis" /><span class="box"></span><span>Gestion de devis</span></label>
+          <label class="check"><input type="checkbox" name="besoin" value="Interface employé/admin" /><span class="box"></span><span>Interface employé / admin</span></label>
+          <label class="check"><input type="checkbox" name="besoin" value="Support client" /><span class="box"></span><span>Support client</span></label>
+          <label class="check"><input type="checkbox" name="besoin" value="Outil métier sur mesure" /><span class="box"></span><span>Outil métier sur mesure</span></label>
+          <label class="check"><input type="checkbox" name="besoin" value="Je ne sais pas encore" /><span class="box"></span><span>Je ne sais pas encore</span></label>
+        </div>
+      </div>
+
+      <div class="form__field span-2">
+        <label class="form__label" for="f-message">Message</label>
+        <textarea id="f-message" name="message" placeholder="Décrivez votre activité, vos outils actuels (Excel, mail, WhatsApp…) et ce qui vous fait perdre du temps."></textarea>
+      </div>
+
+      <div class="form__submit">
+        <p class="form__legal">En envoyant ce formulaire, vous acceptez d'être recontacté par WebPronto au sujet de votre demande. Aucun engagement.</p>
+        <button type="submit" class="btn btn--primary">
+          Envoyer ma demande
+          <span class="arrow" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </button>
+      </div>
+
+      <div class="form__success" role="status" aria-live="polite">
+        <span class="badge">demande envoyée</span>
+        <h3 class="h-card">Merci, votre demande a bien été envoyée.</h3>
+        <p>WebPronto vous répondra avec une première piste concrète. Une réponse arrive en général sous 24 à 48&nbsp;heures.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <div class="footer__brand">
+          <img src="assets/logo_webpronto.png" alt="WebPronto" class="footer__brand-img" />
+        </div>
+        <p class="footer__tag">Sites, CRM et outils métier sur mesure pour les petites entreprises.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#exemples">Exemples</a></li>
+          <li><a href="#offres">Offres</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@webpronto.fr">contact@webpronto.fr</a></li>
+          <li><a href="#contact">Demander un diagnostic</a></li>
+          <li><a href="#">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> WebPronto · Tous droits réservés</span>
+      <span>Conçu en France · webpronto.fr</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Header scroll state
+  const header = document.getElementById('site-header');
+  const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Mobile menu (simple anchor smooth-scroll only; menu intentionally minimal)
+  // FAQ accordion
+  document.querySelectorAll('.faq__item').forEach((item) => {
+    const btn = item.querySelector('.faq__btn');
+    btn.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq__item.open').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // Checkbox state styling
+  document.querySelectorAll('.check').forEach((label) => {
+    const input = label.querySelector('input');
+    const sync = () => label.classList.toggle('is-active', input.checked);
+    input.addEventListener('change', sync);
+    sync();
+  });
+
+  // Form submission (mock)
+  const form = document.getElementById('form');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const required = form.querySelectorAll('[required]');
+    let ok = true;
+    required.forEach((el) => {
+      if (!el.value || (el.type === 'email' && !/.+@.+\..+/.test(el.value))) {
+        ok = false;
+        el.style.borderColor = '#E25C5C';
+        el.addEventListener('input', () => el.style.borderColor = '', { once: true });
+      }
+    });
+    if (!ok) return;
+    form.classList.add('is-sent');
+    const top = form.getBoundingClientRect().top + window.scrollY - 70;
+    window.scrollTo({ top, behavior: 'smooth' });
+  });
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -60px 0px', threshold: 0.05 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Smooth scroll for in-page links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href').slice(1);
+      if (!id) return;
+      const el = document.getElementById(id);
+      if (!el) return;
+      e.preventDefault();
+      const top = el.getBoundingClientRect().top + window.scrollY - 70;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  });
+</script>
 </body>
 </html>
+
