@@ -37,11 +37,26 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </span>
       </a>
-      <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-controls="mobile-nav" aria-expanded="false">
+        <svg class="menu-toggle__open" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="menu-toggle__close" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       </button>
     </div>
   </div>
+
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Menu mobile">
+    <a href="#services">Services</a>
+    <a href="#exemples">Exemples</a>
+    <a href="#methode">Méthode</a>
+    <a href="#offres">Offres</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="btn btn--primary">
+      Demander un diagnostic
+      <span class="arrow" aria-hidden="true">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
+  </nav>
 </header>
 
 <!-- ===================== HERO ===================== -->
@@ -789,7 +804,7 @@ la technique au service du terrain.</h2>
       </a>
     </div>
 
-    <form class="form reveal" id="form" novalidate>
+    <form class="form reveal" id="form" action="https://formspree.io/f/xlgvnlva" method="POST" novalidate>
       <div class="form__field">
         <label class="form__label" for="f-nom">Nom</label>
         <input id="f-nom" name="nom" type="text" placeholder="Camille Martin" required />
@@ -902,13 +917,43 @@ la technique au service du terrain.</h2>
   // Year
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Header scroll state
+  // Header scroll state + directional condensed state (mobile)
   const header = document.getElementById('site-header');
-  const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
-  onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileNav = document.getElementById('mobile-nav');
+  const CONDENSE_TRIGGER = 80;
+  let lastY = window.scrollY;
+  let ticking = false;
+  function updateHeader() {
+    const y = window.scrollY;
+    header.classList.toggle('is-scrolled', y > 8);
+    if (y <= CONDENSE_TRIGGER) {
+      header.classList.remove('is-condensed');
+    } else if (y > lastY + 3) {
+      header.classList.add('is-condensed');
+    } else if (y < lastY - 3) {
+      header.classList.remove('is-condensed');
+    }
+    lastY = y;
+    ticking = false;
+  }
+  window.addEventListener('scroll', () => {
+    if (!ticking) { requestAnimationFrame(updateHeader); ticking = true; }
+  }, { passive: true });
+  updateHeader();
 
-  // Mobile menu (simple anchor smooth-scroll only; menu intentionally minimal)
+  // Mobile burger menu
+  function closeMobileMenu() {
+    header.classList.remove('is-menu-open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+  }
+  menuToggle.addEventListener('click', () => {
+    const isOpen = header.classList.toggle('is-menu-open');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+  mobileNav.addEventListener('click', (e) => {
+    if (e.target.closest('a')) closeMobileMenu();
+  });
   // FAQ accordion
   document.querySelectorAll('.faq__item').forEach((item) => {
     const btn = item.querySelector('.faq__btn');
@@ -927,9 +972,10 @@ la technique au service du terrain.</h2>
     sync();
   });
 
-  // Form submission (mock)
+  // Form submission (Formspree, async)
   const form = document.getElementById('form');
-  form.addEventListener('submit', (e) => {
+  const submitBtn = form.querySelector('button[type="submit"]');
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const required = form.querySelectorAll('[required]');
     let ok = true;
@@ -941,9 +987,26 @@ la technique au service du terrain.</h2>
       }
     });
     if (!ok) return;
-    form.classList.add('is-sent');
-    const top = form.getBoundingClientRect().top + window.scrollY - 70;
-    window.scrollTo({ top, behavior: 'smooth' });
+
+    submitBtn.disabled = true;
+    const originalLabel = submitBtn.innerHTML;
+    submitBtn.innerHTML = 'Envoi en cours…';
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' },
+      });
+      if (!res.ok) throw new Error('Formspree error ' + res.status);
+      form.classList.add('is-sent');
+      const top = form.getBoundingClientRect().top + window.scrollY - 70;
+      window.scrollTo({ top, behavior: 'smooth' });
+    } catch (err) {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalLabel;
+      alert("Désolé, l'envoi a échoué. Vous pouvez écrire directement à contact@webpronto.fr.");
+    }
   });
 
   // Reveal on scroll
