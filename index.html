@@ -789,7 +789,7 @@ la technique au service du terrain.</h2>
       </a>
     </div>
 
-    <form class="form reveal" id="form" novalidate>
+    <form class="form reveal" id="form" action="https://formspree.io/f/xlgvnlva" method="POST" novalidate>
       <div class="form__field">
         <label class="form__label" for="f-nom">Nom</label>
         <input id="f-nom" name="nom" type="text" placeholder="Camille Martin" required />
@@ -927,9 +927,10 @@ la technique au service du terrain.</h2>
     sync();
   });
 
-  // Form submission (mock)
+  // Form submission (Formspree, async)
   const form = document.getElementById('form');
-  form.addEventListener('submit', (e) => {
+  const submitBtn = form.querySelector('button[type="submit"]');
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const required = form.querySelectorAll('[required]');
     let ok = true;
@@ -941,9 +942,26 @@ la technique au service du terrain.</h2>
       }
     });
     if (!ok) return;
-    form.classList.add('is-sent');
-    const top = form.getBoundingClientRect().top + window.scrollY - 70;
-    window.scrollTo({ top, behavior: 'smooth' });
+
+    submitBtn.disabled = true;
+    const originalLabel = submitBtn.innerHTML;
+    submitBtn.innerHTML = 'Envoi en cours…';
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' },
+      });
+      if (!res.ok) throw new Error('Formspree error ' + res.status);
+      form.classList.add('is-sent');
+      const top = form.getBoundingClientRect().top + window.scrollY - 70;
+      window.scrollTo({ top, behavior: 'smooth' });
+    } catch (err) {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalLabel;
+      alert("Désolé, l'envoi a échoué. Vous pouvez écrire directement à contact@webpronto.fr.");
+    }
   });
 
   // Reveal on scroll
