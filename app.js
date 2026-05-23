@@ -9,13 +9,26 @@
   const mobileNav = document.getElementById('mobile-nav');
 
   if (header) {
-    const CONDENSE_TRIGGER = 80;
+    // Bascule vers l'état condensé une fois passé le premier CTA du hero
+    // (pour éviter le doublon avec le bouton du header sur mobile).
+    // Fallback : 80px si on n'est pas sur une page avec ce CTA.
+    const heroCta = document.querySelector('.hero__ctas .btn--primary');
+    let condenseTrigger = 80;
+    const computeTrigger = () => {
+      if (!heroCta) { condenseTrigger = 80; return; }
+      const rect = heroCta.getBoundingClientRect();
+      condenseTrigger = Math.max(80, rect.bottom + window.scrollY);
+    };
+    computeTrigger();
+    window.addEventListener('load', computeTrigger);
+    window.addEventListener('resize', computeTrigger, { passive: true });
+
     let lastY = window.scrollY;
     let ticking = false;
     function updateHeader() {
       const y = window.scrollY;
       header.classList.toggle('is-scrolled', y > 8);
-      if (y <= CONDENSE_TRIGGER) {
+      if (y <= condenseTrigger) {
         header.classList.remove('is-condensed');
       } else if (y > lastY + 3) {
         header.classList.add('is-condensed');
