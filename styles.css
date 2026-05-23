@@ -481,12 +481,6 @@ h1, h2, h3, h4 {
   transition: background .2s ease;
 }
 .problem:hover { background: #FAFCFF; }
-.problem__num {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  color: var(--ink-400);
-}
 .problem__txt {
   font-family: var(--font-display);
   font-size: 19px;
